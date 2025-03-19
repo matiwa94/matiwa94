@@ -1,19 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-<link rel="stylesheet" href="style.css">
 <meta charset="utf-8">
 <title>matiwa94</title>
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="Moja stronka przedstawiająca, co potrafię">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Mateusz">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<p><ol id="menu">
-		<li><a href="index.html">Strona Główna</a></li>
-		<li><a href="php.html">PHP</a></li>
-		<li><a href="javascript.html">JavaScript</a></li>
-		<li><a href="mysql.html">MySQL</a></li>
-		<li>
-	</ol>
-</p>
+	<header>
+		<nav>
+			<ol id="menu">
+				<li><a href="index.html">Strona Główna</a></li>
+				<li><a href="#">Projekty</a>
+				<ul>
+				<li><a href="php.html">PHP</a></li>
+				<li><a href="javascript.html">JavaScript</a></li>
+				<li><a href="mysql.html">MySQL</a></li>
+				</ul></li>
+				<li><a href="aboutme.html">O mnie</a></li>
+			</ol>
+		</nav>
+	</header>
+
+	<main>
+        <section id="home">
+            <h2>Strona Główna</h2>
+            <p>Witaj na mojej przykładowej stronie głównej!</p>
+            <img src="example.jpg" alt="Przykładowy obrazek">
+        </section>
+        
+        <section id="about">
+            <h2>O mnie</h2>
+            <p>Informacje o mnie. Jestem web developerem z wieloletnim doświadczeniem.</p>
+        </section>
+        
+        <section id="services">
+            <h2>Usługi</h2>
+            <ul>
+                <li>Tworzenie stron internetowych</li>
+                <li>Optymalizacja SEO</li>
+                <li>Wsparcie techniczne</li>
+            </ul>
+        </section>
+        
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <form action="/submit-form" method="post">
+                <label for="name">Imię:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Wyślij</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mateusz Iwańczak</p>
+    </footer>
 <p><audio controls>
 <source src="Sounds/ANNARZEWÓDZKA-SercaŻar.mp3" type="audio/mpeg">
 Twoja przeglądarka nie obsługuje tagu audio.

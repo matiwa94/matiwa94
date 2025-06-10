@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-<meta charset="utf-8">
-<title>matiwa94</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="style_mobile.css">
-<meta name="description" content="Moja stronka przedstawiająca, co potrafię">
-<meta name="keywords" content="HTML, CSS, JavaScript">
-<meta name="author" content="Mateusz">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
-	<header>
-		<nav>
-			<ol id="menu">
-				<li><a href="index.html">Strona Główna</a></li>
-				<li><a href="#">Projekty</a>
-				<ul>
-				<li><a href="coreldraw.html">CorelDRAW</a></li>
-				<li><a href="inkscape.html">Inkscape</a></li>
-				</ul></li>
-				<li><a href="aboutme.html">O mnie</a></li>
-			</ol>
-		</nav>
-	</header>
-<div id="element_z_tlem">
-    <h1 id="akapit">matiwa94</h1>
-  </div>
-	<main>
-        <section id="home">
-            <h2>Strona Główna</h2>
-            <p>Witaj na mojej przykładowej stronie głównej!</p>
-            <img src="images/mati1.jpg" alt="Przykładowy obrazek">
-        </section>
-    </main>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>matiwa94</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="menu">
+            <a href="index.html">Strona główna</a>
+            <div class="dropdown">
+                <a href="#">Projekty</a>
+                <ul>
+                    <li><a href="coreldraw.html">CorelDRAW</a></li>
+                    <li><a href="inkscape.html">Inkscape</a></li>
+                </ul>
+            </div>
+            <a href="aboutme.html">O mnie</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+        <div class="slideshow">
+        <img class="slide active" src="images/baner/MI01.png" alt="Slajd 1">
+        <img class="slide" src="images/baner/MI02.png" alt="Slajd 2">
+        <img class="slide" src="images/baner/MI03.png" alt="Slajd 3">
+        <img class="slide" src="images/baner/MI04.png" alt="Slajd 3">
+        <img class="slide" src="images/baner/MI05.png" alt="Slajd 3">
+        <img class="slide" src="images/baner/MI06.png" alt="Slajd 3">
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Mateusz Iwańczak</p>
-    </footer>
-</body>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 4000); // Zmień co 3 sekundy
+    </script>
+    </body>
 </html>
